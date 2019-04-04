@@ -8,7 +8,7 @@ type MsgPXPayload struct {
 	Workspace 		string 			`json:"workspace"`
 	ManifestFile 	string 			`json:"manifestFile"`
 	Resources 		[]PXResource  	`json:"resources"`
-	ResultDir 		string 			`json:""`
+	ResultDir 		string 			`json:"resultDir"`
 }
 
 type PXResource struct {
