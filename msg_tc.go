@@ -12,6 +12,8 @@ type MsgTcPayload struct {
 	TrackId 		int         `json:"trackId"`
 	ResultDir 		string    `json:"resultDir"`
 	Policy			string   `json:"policy"`
+
+	FlacEnc			bool		`json:"flacEnc"`
 }
 
 
@@ -20,7 +22,7 @@ type MsgTC struct {
 	Payload 	MsgTcPayload 	`json:"payload"`
 }
 
-func GenTCMessage(albumId int , trackId int , res Resource , resultDir string , policy string) MsgTC {
+func GenTCMessage(albumId int , trackId int , res Resource , resultDir string , policy string , flacEnc bool) MsgTC {
 	Id := GenID()
 	return MsgTC{
 		Header:MsgHeader{
@@ -46,6 +48,7 @@ func GenTCMessage(albumId int , trackId int , res Resource , resultDir string , 
 			TrackId:      trackId,
 			ResultDir:    resultDir,
 			Policy: policy,
+			FlacEnc:flacEnc,
 		},
 	}
 }
