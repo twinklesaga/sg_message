@@ -17,7 +17,7 @@ type MsgHeader struct {
 	From 		string	`json:"from"`
 	To 			string 	`json:"to"`
 	ReplyTo 	string	`json:"replyTo"`
-	IssueDate 	int64	`json:"issuedDate"`
+	IssueDate 	int64	`json:"issueDate"`
 	ExpiryDate 	int64	`json:"expiryDate"`
 	Compressed 	string 	`json:"compressed"`
 }
